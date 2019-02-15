@@ -19,10 +19,10 @@
 #### Bookdown and Projects
 
 * [Bookdown :book: ][nd025_bookdown]
-* [Project 01 :rocket: ][project_01_url]
-* [Project 02 :rocket: ][project_02_url]
-* [Project 03 :rocket: ][project_03_url]
-* [Project 04 :rocket: ][project_04_url]
+* [Project 01][project_01_url]
+* [Project 02][project_02_url]
+* [Project 03][project_03_url]
+* [Project 04][project_04_url]
 
 
 [nd025_bookdown]: #
