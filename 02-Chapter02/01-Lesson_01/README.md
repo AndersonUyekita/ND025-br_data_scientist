@@ -395,8 +395,6 @@ The process is the same.
 
 ### Regularization
 
-![Figure 14 - Non-linear data.](01-img/nd025_c2_l01_14.png)
+![Figure 14 - Non-linear data.](01-img/nd025_c2_l01_15.png)
 
 <center><em>Figure 14 - Comparison Lasso (L1) and Ridge (L2).</em></center><br>
-
-.
