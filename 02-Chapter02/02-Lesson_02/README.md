@@ -1,4 +1,4 @@
-# ND025 - Supervised Learning
+# ND025 - Supervised Learning - Lesson 02
 
 #### Tags
 * Author : AH Uyekita
