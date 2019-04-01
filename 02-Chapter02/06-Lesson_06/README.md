@@ -23,5 +23,3 @@ The result is an enhanced solution based on several complete different solutions
 #### Boosting
 
 This one is quite similar to the Bagging, but use the concept of *Weak Learners* that stand to the specific solutions for small part of the problem. In a case of classification, it will be divided into several single splits. Later, the model will combine these weak learners to create an optimized one (or **strong learner**). The name boosting cames from the idea of Boosting the weight of each observation when it fails in the classification, which means this observation should have more weight in the next step of the model building process.
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/LsK-xG1cLYA?controls=0" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
