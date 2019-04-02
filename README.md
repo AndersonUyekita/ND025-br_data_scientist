@@ -26,7 +26,7 @@
 
 
 [nd025_bookdown]: #
-[project_01_url]: #
+[project_01_url]: https://mybinder.org/v2/gh/AndersonUyekita/ND025-br_data_scientist/master?filepath=02-Chapter02/00-Project_01/finding_donors_v2.ipynb
 [project_02_url]: #
 [project_03_url]: #
 [project_04_url]: #
