@@ -1,13 +1,15 @@
-# ND025 - Supervised Learning - Lesson 05
+# ND025 - Supervised Learning
 
 #### Tags
 * Author : AH Uyekita
-* Title  :  _Hierarchical and Density-based Clustering_
-* Date   : 01/04/2019
+* Title  :  _Clustering Mini-project_
+* Date   : 05/04/2019
 * Course : Data Scientist Nanodegree Program
-    * COD    : ND025
-    * **Instructor:** Jay
+    * COD    : ND025-br
+    * **Instructor:** Sebastian Thurn
+    * **Instructor:** Katie Malone
+    * **Instructor:** Jay Alammar
 
 ***
 
-## Support Vector Machine
+## Clustering Mini-project
