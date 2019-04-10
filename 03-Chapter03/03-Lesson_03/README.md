@@ -1,4 +1,4 @@
-# ND025 - Supervised Learning - Lesson 05
+# ND025 - Supervised Learning - Lesson 03
 
 #### Tags
 * Author : AH Uyekita
@@ -30,7 +30,11 @@ The results when apply it the K-means is presented in Figure 3. As you can see, 
 
 <em><center>Figure 3 - K-means results.</center></em>
 
-This is the drawback of using K-means, generally the clusters should have circle or spherical shapes to be properly divided. Figure 4 shows an ilustrations with several datasets.
+This is the drawback of using K-means, generally the clusters should have circle or spherical shapes to be properly divided.
+
+#### K-means Comparison
+
+Figure 4 shows an ilustrations with several datasets.
 
 ![Figure 4 - New dataset to be clustered.](01-img/nd025_c3_l03_04.png)
 
@@ -102,7 +106,7 @@ Unfortunately, this kind of Hierarchical Clustering method also has a shortcomin
 
 ### Average Link Clustering
 
-Instead of using the closest or the farthest points, this method summarize the distances using the avarega.
+Instead of using the closest or the farthest points, this method summarize the distances using the average.
 
 ![Figure 11 - Average Link.](01-img/nd025_c3_l03_11.png)
 
@@ -110,21 +114,126 @@ Instead of using the closest or the farthest points, this method summarize the d
 
 ### Ward's Method
 
+This method uses the variance between two cluster to decide which one should be clustered. Figure 12 shows an example of how to perform the calculation of variance.
 
 ![Figure 12 - Ward's Method.](01-img/nd025_c3_l03_12.png)
 
 <em><center>Figure 12 - Ward's Method.</center></em>
 
+The first step is to calculate the center point of the cluster and then calculate the distance of all point to this center. The variance of the square of the distance will be used to determine which cluster should be merged.
 
+### Clustering using Scikit Learn
+
+The Scikit Learn has these three linkage.
+
+**Importing the Scikit Learn Module**
+```py
+# Importing the library
+from sklearn import cluster
+```
+
+**Creating the object**
+```py
+# Using the constructor
+clust = cluster.AgglomerativeClustering(n_cluster = 3,
+                                        linkage = 'ward')
+```
+
+**Predicting**
+```py
+# Creating the labels to cluster the observations.
+labels = clust.fit_predict(X)
+```
+
+You can visualize the Dendogram using the Scipy module.
+
+**Importing Scipy module**
+```py
+# Importing the scipy module.
+from scipy.cluster.hierarchy import dendogram, ward, single
+```
+
+**Creating object linkage_matrix**
+```py
+# Creating a object to be used by dendogram.
+linkage_matrix = ward(X)
+```
+**Plot the Dendogram**
+```py
+# Plotting the dendogram.
+dendogram(linkage_matrix)
+
+plt.show()
+```
+### Advantages and Disadvantages
+
+**Advantages:**
+* Resulting hierarchical representation can be very informative;
+* Provides and additional ability to visualize, and;
+* Especially potent when the dataset contains real hierarchical relationships (e.g. Evolutionary Biology).
+
+**Disadvantages:**
+* Sensitive to noise and outliers, and;
+* Computaionally intensive $O(N^2)$.
 
 ## DBSCAN (Density-based Spatial Clustering of Applications with Noise)
 
+The DBSCAN is totally different from the other techniques already presented. Because it introduce the idea of noise, in this way I need to define two new inputs:
 
+* `Epsilon`: This is the radius around the point to search any other point;
+* `MinPts`: The minimum quantity of points required to form a density cluster.
 
+Figure 13 shows an example of how to apply this method.
 
+![Figure 13 - DBSCAN.](01-img/nd025_c3_l03_13.png)
 
+<em><center>Figure 13 - DBSCAN.</center></em>
 
+#### K-means Comparison
 
+Figure 14 shows a comparison between the K-means and DBSCAN outcomes.
 
+![Figure 14 - K-means and DBSCAN Comparison.](01-img/nd025_c3_l03_14.png)
 
-.
+<em><center>Figure 14 - K-means and DBSCAN Comparison.</center></em>
+
+#### Scikit Learn
+
+It is very simple to use DBSCAN in Scikit Learn.
+**Importing cluster module**
+```py
+# Importing the module.
+from sklearn import cluster
+```
+
+**Constructor**
+```py
+# Creating the object DBSCAN
+db = cluster.DBSCAN(eps = 0.5,           # Epsilon
+                    min_samples = 5)     # MinPts
+```
+
+**Training**
+```py
+# Training the object.
+db.fit(X)
+```
+
+**Printing the clusters**
+```py
+# Printing the labels.
+print(db.labels_)
+```
+Have in mind, all observations with label equal to -1 means it is noise.
+
+### Advantages and Disadvantages
+
+**Advantages:**
+* We do not need to specify the number of clusters;
+* Flexibility in the shapes & sizes of clusters;
+* Able to deal with noise, and;
+* Able to deal with outliers.
+
+**Disadvantages:**
+* Border points that are rechable from two clusters, and;
+* Faces difficulty finding clusters of varying the densities.
