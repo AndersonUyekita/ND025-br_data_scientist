@@ -10,4 +10,112 @@
 
 ***
 
-## Gaussian Mixture Models and Cluster Validation
+## Gaussian Mixture Models Clustering
+
+This is a soft clustering algorithm, which calculates for each point/observation the membership for every cluster. The highest membership will determine the cluster of that point. Figure 1 shows it.
+
+![Figure 1 - GMM Example.](01-img/nd025_c3_l04_01.png)
+
+<em><center>Figure 1 - GMM Example.</center></em>
+
+To facilitate the interpretation, let's visualize an 1D example. In Figure 2, you can see "two groups" of points.
+
+![Figure 2 - 1D Example.](01-img/nd025_c3_l04_02.png)
+
+<em><center>Figure 2 - 1D Example.</center></em>
+
+Each group could be modeled as an output of two different Gaussian Distribution. To turn it a bit more realistic, Figure 3 shows it in a 2D example.
+
+![Figure 3 - 2D Example.](01-img/nd025_c3_l04_03.png)
+
+<em><center>Figure 3 - 2D Example.</center></em>
+
+The GMM accomplish the clusterization based on the idea of each cluster has your own distribution, thus the GMM is based on the Gaussian Distribution. Figure 4 shows the Normal Distribution also known as Gaussin Distribution.
+
+![Figure 4 - Gaussian Distribution.](01-img/nd025_c3_l04_04.png)
+
+<em><center>Figure 4 - Gaussian Distribution.</center></em>
+
+#### Gaussian Distribution Recap
+
+Analysing one dimension feature, you can use the histogram to aid the visualization. As you can see in Figure 5.
+
+![Figure 5 - Bell Curve and Histogram of 1D Feature.](01-img/nd025_c3_l04_05.png)
+
+<em><center>Figure 5 - Bell Curve and Histogram of 1D Feature.</center></em>
+
+The bandwidth between the average (delimited by the standard deviations) represents 68% of the points in the dataset. This is a property of the Gaussian Distribution.
+
+![Figure 6 - Standard Deviation and Percentage of Points.](01-img/nd025_c3_l04_06.png)
+
+<em><center>Figure 6 - Standard Deviation and Percentage of Points.</center></em>
+
+If you increase the bandwidth to 2 standard deviations around the average, the region will comprise 95%. Lastly, if you have chosen 3 three standard deviations the region reaches 99%.
+
+Now, let's dive in using two dimensions represented in one dimension (like a projection).
+
+![Figure 7 - Two Gaussians Distributions.](01-img/nd025_c3_l04_07.png)
+
+<em><center>Figure 7 - Two Gaussians Distributions.</center></em>
+
+Adopting a 2D representation, you can plot the variables Chemistry Score and Geology Score on X and Y axis. This is the case of a Multivariate Gaussian Distribution.
+
+![Figure 8 - Multivariate Gaussian Distribution.](01-img/nd025_c3_l04_08.png)
+
+<em><center>Figure 8 - Multivariate Gaussian Distribution.</center></em>
+
+
+### Expectation - Maximization for Gaussian Mixtures
+
+The steps to perform the GMM Clustering.
+
+* <kbd>STEP 1</kbd> - Initialize K Gaussian Distribuions;
+* <kbd>STEP 2</kbd> - Soft-Cluster Data - **Expectation**;
+* <kbd>STEP 3</kbd> - Re-estimate the Gaussians - **Maximization**;
+* <kbd>STEP 4</kbd> - Evaluate Log-likelihood to check for convergence, and;
+* Repeat from <kbd>STEP 2</kbd> until converged.
+
+### Example
+
+#### Step 1
+
+In this case we have used the random initialization. We assume some values to use as averages and standard deviations.
+
+![Figure 9 - Parameters Initialization.](01-img/nd025_c3_l04_09.png)
+
+<em><center>Figure 9 - Parameters Initialization.</center></em>
+
+For this example I have assumed:
+
+|Cluster|Average feature 1|Average feature 2|Standard Deviation|
+|:-:    |:-:      |:-:       |:-:|
+|A      |64.63    |76.30     |100|
+|B      |46.02    |51.30     |57 |
+
+#### Step 2
+
+In this Step we are going to calculate the memberships values.
+
+![Figure 10 - .](01-img/nd025_c3_l04_10.png)
+
+<em><center>Figure 10 - .</center></em>
+
+#### Step 3
+
+
+
+#### Step 4
+
+
+
+
+
+
+## Cluster Validation
+
+
+
+
+
+
+.
