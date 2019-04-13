@@ -75,9 +75,9 @@ The steps to perform the GMM Clustering.
 * <kbd>STEP 4</kbd> - Evaluate Log-likelihood to check for convergence, and;
 * Repeat from <kbd>STEP 2</kbd> until converged.
 
-### Example
+#### Example
 
-#### Step 1
+##### Step 1
 
 In this case we have used the random initialization. We assume some values to use as averages and standard deviations.
 
@@ -88,23 +88,39 @@ In this case we have used the random initialization. We assume some values to us
 For this example I have assumed:
 
 |Cluster|Average feature 1|Average feature 2|Standard Deviation|
-|:-:    |:-:      |:-:       |:-:|
-|A      |64.63    |76.30     |100|
-|B      |46.02    |51.30     |57 |
+|:-:    |:-:              |:-:              |:-:               |
+|A      |64.63            |76.30            |100               |
+|B      |46.02            |51.30            |57                |
 
-#### Step 2
+##### Step 2 - Expectation
 
-In this Step we are going to calculate the memberships values.
+In this Step we are going to calculate the cluster memberships values for each points. First, we need to calculate the likelihood using the Equation (1):
 
-![Figure 10 - .](01-img/nd025_c3_l04_10.png)
+$$N(X|\mu,\sigma^2) = \frac{1}{2 \pi \sigma^2} e^{-\frac{1}{2 \pi \sigma} (X - \mu)^2 } \tag{1}$$
 
-<em><center>Figure 10 - .</center></em>
+Thereafter, it is necessary to normalize the results using the Equation (2).
 
-#### Step 3
+$$E[Z_{1A}] = \frac{N(X|\mu_A,\sigma^2_A)}{N(X|\mu_A,\sigma^2_A) + N(X|\mu_B,\sigma^2_B)} \tag{2}$$
+
+Figure 10 shows an example of how to apply it.
+
+![Figure 10 - Calculating the Expectation.](01-img/nd025_c3_l04_10.png)
+
+<em><center>Figure 10 - Calculating the Maximum Expectation.</center></em>
 
 
 
-#### Step 4
+$$N(X_1 = 62|\mu_A = 64.63, \sigma^2 = 100) = \frac{1}{\sqrt{2 \pi 100^2}} e^{-\frac{1}{2 \pi 100} (62 - 64.63)^2} = 0.001336$$
+
+$$N(X_1 = 71|\mu_B = 76.30, \sigma^2 = 57) = \frac{1}{\sqrt{2 \pi 100^2}} e^{-\frac{1}{2 \pi 100} (62 - 64.63)^2} = 0.00000987$$
+
+
+
+##### Step 3
+
+
+
+##### Step 4
 
 
 
