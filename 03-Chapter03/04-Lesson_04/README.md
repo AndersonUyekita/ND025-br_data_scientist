@@ -129,6 +129,7 @@ $$N(X_1 = 71|\mu_B = 76.30, \sigma^2 = 57) = \frac{1}{\sqrt{2 \pi 100^2}} e^{-\f
 
 ## Cluster Validation
 
+This is procedure to evaluate the Clustering results. There are three categories of Cluster Validation.
 
 
 
