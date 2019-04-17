@@ -112,7 +112,7 @@ Figure 10 shows an example of how to apply it.
 
 $$N(X_1 = 62|\mu_A = 64.63, \sigma^2 = 100) = \frac{1}{\sqrt{2 \pi 100^2}} e^{-\frac{1}{2 \pi 100} (62 - 64.63)^2} = 0.001336$$
 
-$$N(X_1 = 71|\mu_B = 76.30, \sigma^2 = 57) = \frac{1}{\sqrt{2 \pi 100^2}} e^{-\frac{1}{2 \pi 100} (62 - 64.63)^2} = 0.00000987$$
+$$N(X_1 = 71|\mu_B = 76.30, \sigma^2 = 57) = \frac{1}{\sqrt{2 \pi 57^2}} e^{-\frac{1}{2 \pi 57} (71 - 76.30)^2} = 0.00000987$$
 
 
 
@@ -129,7 +129,40 @@ $$N(X_1 = 71|\mu_B = 76.30, \sigma^2 = 57) = \frac{1}{\sqrt{2 \pi 100^2}} e^{-\f
 
 ## Cluster Validation
 
-This is procedure to evaluate the Clustering results. There are three categories of Cluster Validation.
+This is the procedure to evaluate Clustering results. There are three categories of Cluster Validation.
+
+* **External Indices:** Based on the labels data and usually when performing a Supervised Learning;
+
+* **Internal Indices:** Based on data internal scores when performing a Unsupervised Learning;
+
+* **Relative Indices:** ????
+
+Most of the indices is based on Compactness and Separability.
+
+* **Compactness:** This is a measure of how close the points of a cluster are to each other;
+
+* **Separability:** This is a measure of how far two cluster are to each other.
+
+The basic concept behind it, is to create cluster with elements very close to each other and cluster are most distinct to each other.
+
+#### External Indices
+
+These scores are calculated when you have the labels of the dataset. Generally, in a Supervised Learning model.
+
+Figure 11 shows some of the score available in Scikit Learn to evaluate using external indices.
+
+![Figure 11 - External Indices.](01-img/nd025_c3_l04_11.png)
+
+<em><center>Figure 11 - External Indices.</center></em>
+
+Using the Adjusted Randon Index (ARI) as an example, Figure 12 shows the values of ARI.
+
+![Figure 12 - External Indices Comparison.](01-img/nd025_c3_l04_12.png)
+
+<em><center>Figure 12 - External Indices Comparison.</center></em>
+
+
+#### Internal Indices
 
 
 
