@@ -155,17 +155,24 @@ Figure 11 shows some of the score available in Scikit Learn to evaluate using ex
 
 <em><center>Figure 11 - External Indices.</center></em>
 
-Using the Adjusted Randon Index (ARI) as an example, Figure 12 shows the values of ARI.
+**Adjusted Rand Index**
+
+Using the Adjusted Rand Index (ARI) as an example, Figure 12 shows the values of ARI.
 
 ![Figure 12 - External Indices Comparison.](01-img/nd025_c3_l04_12.png)
 
 <em><center>Figure 12 - External Indices Comparison.</center></em>
 
-
 #### Internal Indices
 
+Figure 13 shows some of the score available in Scikit Learn to evaluate using internal indices.
 
+![Figure 13 - Some Internal Indices.](01-img/nd025_c3_l04_13.png)
 
+<em><center>Figure 13 - Some Internal Indices.</center></em>
 
+**Silhouette Index**
 
-.
+![Figure 14 - Internal Indices Comparison.](01-img/nd025_c3_l04_14.png)
+
+<em><center>Figure 14 - Internal Indices Comparison.</center></em>
